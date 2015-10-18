@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Button btn = (Button)v;
         String btnText = btn.getText().toString();
 
-        if(lhs == null)
+        if(lhs.equals("0"))
             lhs = btnText;
         else
             lhs += btnText;
@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.v(this.getLocalClassName(), "Activity loaded");
+        lhs = "0";
+        TextView t1 = (TextView)findViewById(R.id.lblBuilder);
+        t1.setText(lhs);
     }
 
     @Override
