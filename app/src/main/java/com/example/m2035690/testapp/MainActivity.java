@@ -1,5 +1,6 @@
 package com.example.m2035690.testapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -167,4 +168,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void switchActivity(View view)
+    {
+        Intent bluh = new Intent(this, MainActivity2Activity.class);
+        bluh.putExtra("myKey", true);
+        startActivity(bluh);
+    }
 }
